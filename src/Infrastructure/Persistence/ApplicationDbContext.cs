@@ -31,6 +31,10 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
 
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 
+    public DbSet<AppointmentList> AppointmentLists => Set<AppointmentList>();
+
+    public DbSet<Appointment> AppointmentItems => Set<Appointment>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
